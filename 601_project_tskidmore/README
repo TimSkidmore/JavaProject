@@ -1,5 +1,37 @@
 README file
 
+Project details.  My project was learning eGit.  I connected to local repository and GitHub.
+I performed pushes, pulls, and commits.
+
 Timothy Skidmore
 
 Added Comment from GitHUB
+
+
+//git commands in git bash video
+cd NewGit
+mkdir work
+mkdir repo
+dir
+cd repo
+git init --bare MyNewRepo.git
+cd ../work
+git init
+git remote add origin "$PWD/../repo/MyNewRepo.git"
+git config --local user.name Tim
+git config --local user.email toskidmore@stthomas.edu
+git config --local core.autocrlf false
+git config --local core.eol lf
+echo '*.sh eol=lf'> .gitattributes
+git add .
+git status
+git commit -m "inital setup"
+git push origin master
+git branch dev_Tim
+git checkout dev_Tim
+git branch
+
+mkdir from_Tim
+git status
+git log
+gitk --all
